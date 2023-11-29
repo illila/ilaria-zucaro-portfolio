@@ -1,0 +1,293 @@
+/* https://coolors.co/palette/f4f1de-e07a5f-3d405b-81b29a-f2cc8f */
+:root {
+    --yellow: #f2cc8f;
+    --cream: #f4f1de;
+    --orange: #e07a5f;
+    --blue-violet: #3d405b;
+    --sage: #81b29a;
+    --base-font-size: 22px;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+    font-size: var(--base-font-size);
+    font-family: "DM Sans", sans-serif;
+}
+
+header {
+    padding: 1rem;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--orange);
+    color: var(--cream);
+    font-size: 30px;
+}
+
+a {
+    color: inherit;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.footer-content a {
+    color: var(--cream);
+}
+
+header,
+footer,
+.footer-content,
+.technologies,
+#hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#about-me,
+#works,
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#hero {
+    height: 450px;
+    position: relative;
+    padding: 50px;
+    align-items: flex-end;
+
+    background-color: #e07a5f;
+    opacity: 0.8;
+    background-image: linear-gradient(30deg,
+            #dd927d 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dd927d 87.5%,
+            #dd927d),
+        linear-gradient(150deg,
+            #dd927d 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dd927d 87.5%,
+            #dd927d),
+        linear-gradient(30deg,
+            #dd927d 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dd927d 87.5%,
+            #dd927d),
+        linear-gradient(150deg,
+            #dd927d 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dd927d 87.5%,
+            #dd927d),
+        linear-gradient(60deg,
+            #dd927d77 25%,
+            transparent 25.5%,
+            transparent 75%,
+            #dd927d77 75%,
+            #dd927d77),
+        linear-gradient(60deg,
+            #dd927d77 25%,
+            transparent 25.5%,
+            transparent 75%,
+            #dd927d77 75%,
+            #dd927d77);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+}
+
+.profile-img {
+    height: 100%;
+    border-radius: 30px;
+}
+
+.subtitle {
+    color: var(--cream);
+    padding: 1rem;
+}
+
+.section-title {
+    width: 20%;
+    background-color: #e07a5f;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.section-content,
+.section-content-grid,
+.footer-content {
+    width: 80%;
+    background-color: var(--cream);
+    padding: 3rem 3rem 0rem 3rem;
+}
+
+.technologies {
+    margin-top: 20px;
+}
+
+.section-content-grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 300px;
+}
+
+.project-big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.project-big,
+.project {
+    overflow: hidden;
+}
+
+.project {
+    margin-top: 20px;
+}
+
+img {
+    display: grid;
+}
+
+.technologies div {
+    padding: 20px;
+    background-color: #81b29a;
+    width: 15%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.prj-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--cream);
+}
+
+h3 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.project-big img {
+    object-position: top;
+}
+
+footer .section-title,
+.footer-content {
+    padding-bottom: 3rem;
+    background-color: var(--sage);
+}
+
+#works .section-title,
+.section-content-grid {
+    padding-bottom: 3rem;
+}
+
+.section-title {
+    border-right: 10px solid #dd927d;
+}
+
+footer .section-title {
+    border-right: 10px solid #9fc9b4;
+}
+
+/* media query for tablets */
+@media screen and (max-width: 768px) {
+
+    /* rules for devices from 769px to 992px */
+    nav a {
+        font-size: 18px;
+    }
+
+    #about-me,
+    #works,
+    #contact-me {
+        flex-direction: column;
+    }
+
+    .section-title,
+    .section-content,
+    .section-content-grid,
+    .footer-content {
+        width: 100%;
+        padding: 48px 20px;
+    }
+
+    .technologies {
+        justify-content: flex-start;
+        column-gap: 10px;
+    }
+
+    .technologies div {
+        width: 100%;
+    }
+
+    .section-title {
+        border-right: unset;
+        border-bottom: 10px solid #dd927d;
+    }
+
+    footer .section-title {
+        border-right: unset;
+        border-bottom: 10px solid #9fc9b4;
+    }
+}
+
+/* media query for smartphone */
+@media screen and (max-width: 375px) {
+    /* rules for devices from 769px to 992px */
+
+    #contact-me {
+        width: 100%;
+    }
+
+    .technologies {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    #hero {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .profile-img {
+        width: 100%;
+    }
+
+    nav {
+        justify-content: flex-end;
+        /* align-items: center; */
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+}
